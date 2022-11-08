@@ -1,0 +1,93 @@
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/banner.jpg");
+}
+
+.cover{
+  height: 100%;
+  backdrop-filter: blur(15px);
+  position: relative;
+
+}
+
+.slido{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  border-radius: 20px;
+}
+
+
+.next,.prev{
+  border: none;
+  position: absolute;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.227);
+  color: white;
+  display: none;
+  transition: all 0s linear 0s;
+}
+
+.container:hover .next, .container:hover .prev{
+  display: block;
+}
+.next:hover, .prev:hover{
+  background-color: black;
+  color: white;
+}
+
+.prev{
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.next{
+  left: 95%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+img{
+  width: 90vw;
+  height: 100%;
+}
+.right{
+  animation: fun 2s linear 0s;
+}
+.left{
+  animation: fun2 2s linear 0s;
+}
+
+@keyframes fun {
+  0%{
+    margin: 0;
+  }
+  100%{
+    margin-left: -100vw;
+  }
+}
+@keyframes fun2 {
+  0%{
+    margin: 0;
+  }
+  100%{
+    margin-left: -100vw;
+  }
+}
